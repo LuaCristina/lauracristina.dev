@@ -25,67 +25,35 @@
       <span class="kicker">personal study projects</span>
       <h1><span class="serif">my data</span> <span class="bold">journey</span></h1>
       <p>Things I'm building and learning on my own: notebooks, dashboards, SQL practice and the notes I take along the way.</p>
-      <nav class="filters" aria-label="Filter by topic">
-        <button class="chip active" data-filter="all">all</button>
-        <button class="chip" data-filter="python">python</button>
-        <button class="chip" data-filter="sql">sql</button>
-        <button class="chip" data-filter="power-bi">power bi</button>
-        <button class="chip" data-filter="statistics">statistics</button>
-      </nav>
     </section>
 
     <section class="posts">
 
       <!--
-        ==========================================================
-        HOW TO ADD A NEW PROJECT
-        1. Copy one whole <article> ... </article> block below.
-        2. Paste it at the TOP of this list (newest first).
-        3. Change: date, title, text, tags and links.
-           - data-tags: lowercase, separated by spaces
-             (use the same words as the filter buttons above)
-           - --c: var(--orange) | var(--blue) | var(--yellow)
-        4. Save, then: git add -A && git commit -m "New project" && git push
-        ==========================================================
+        HOW TO ADD A NEW PROJECT: copy the whole <article> ... </article> block,
+        paste it above this one (newest first) and change the texts and links.
       -->
 
-      <article class="post" data-tags="python statistics" style="--c: var(--orange)">
-        <div class="post-meta">
-          <time datetime="2026-09-01">Sep 2026</time>
-          <span class="status">in progress</span>
+      <article class="post post--featured" style="--c: var(--orange)">
+        <div class="post-text">
+          <div class="post-meta">
+            <time datetime="2026-09">Sep 2026</time>
+            <span class="status done">done</span>
+          </div>
+          <h2>Running Dashboard — Strava</h2>
+          <p class="why"><b>Why I made it:</b> I wanted to practice data visualization using my own data: the activities I log on Strava.</p>
+          <p>I exported my activities, cleaned them in Google Sheets and built a one-page report in Looker Studio: yearly totals, activity mix by type, monthly volume and a heatmap of the days and times I train the most.</p>
+          <ul class="tags"><li>looker studio</li><li>google sheets</li><li>data cleaning</li><li>data viz</li></ul>
+          <div class="post-links">
+            <a href="https://lookerstudio.google.com/reporting/a1f18eab-3836-4ecb-83da-a002165ea61c" target="_blank" rel="noopener">open full dashboard ↗</a>
+          </div>
         </div>
-        <h2>Project title goes here</h2>
-        <p>One or two sentences about the question you wanted to answer, the dataset you used and what you found or learned.</p>
-        <ul class="tags"><li>python</li><li>pandas</li><li>statistics</li></ul>
-        <div class="post-links">
-          <a href="https://github.com/LuaCristina" target="_blank" rel="noopener">code ↗</a>
-          <a href="#" target="_blank" rel="noopener">notebook ↗</a>
-        </div>
-      </article>
-
-      <article class="post" data-tags="sql" style="--c: var(--blue)">
-        <div class="post-meta">
-          <time datetime="2026-08-15">Aug 2026</time>
-          <span class="status done">done</span>
-        </div>
-        <h2>Another project title</h2>
-        <p>Describe the problem, the approach (queries, model, charts) and one key insight. Keep it short: the link has the details.</p>
-        <ul class="tags"><li>sql</li><li>data modeling</li></ul>
-        <div class="post-links">
-          <a href="https://github.com/LuaCristina" target="_blank" rel="noopener">code ↗</a>
-        </div>
-      </article>
-
-      <article class="post" data-tags="power-bi" style="--c: var(--yellow)">
-        <div class="post-meta">
-          <time datetime="2026-07-20">Jul 2026</time>
-          <span class="status done">done</span>
-        </div>
-        <h2>Dashboard project title</h2>
-        <p>What the dashboard shows, who it is for and which metrics matter. Add a link to the published report or a screenshot.</p>
-        <ul class="tags"><li>power bi</li><li>dax</li></ul>
-        <div class="post-links">
-          <a href="#" target="_blank" rel="noopener">see dashboard ↗</a>
+        <div class="post-embed">
+          <iframe
+            src="https://lookerstudio.google.com/embed/reporting/a1f18eab-3836-4ecb-83da-a002165ea61c"
+            title="Running Dashboard — Strava (Looker Studio)"
+            loading="lazy" allowfullscreen
+            sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
         </div>
       </article>
 
