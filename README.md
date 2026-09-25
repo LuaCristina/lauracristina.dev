@@ -2,12 +2,12 @@
 
 > **data · dog person · runner**: my personal link page, live at **[lauracristina.dev](https://lauracristina.dev)**.
 
-![Desktop preview](.github/preview/desktop.png)
+![Desktop preview](assets/preview/desktop.png)
 
 A single-screen landing page that links to everything I do: travel vlogs on YouTube, my data journey, my runs and my code. The hero illustration is my dog, drawn in SVG with thin line art and flat color shapes.
 
 <p align="center">
-  <img src=".github/preview/mobile.png" alt="Mobile preview" width="260">
+  <img src="assets/preview/mobile.png" alt="Mobile preview" width="260">
 </p>
 
 ## ✨ Features
@@ -27,8 +27,8 @@ lauracristina.dev/
 ├── assets/
 │   ├── css/style.css     # colors, layout, animations, responsive rules
 │   ├── js/script.js      # background lines, cursor, eye tracking
-│   └── img/favicon.svg
-├── .github/preview/      # screenshots used in this README
+│   ├── img/favicon.svg
+│   └── preview/          # screenshots used in this README
 ├── CNAME                 # custom domain for GitHub Pages
 └── .nojekyll             # serve files as-is on GitHub Pages
 ```
