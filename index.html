@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laura Cristina — data · dog person · runner</title>
+  <meta name="description" content="Laura Cristina: data analyst, dog person and runner. Travel vlogs on YouTube, data projects on GitHub.">
+  <meta property="og:title" content="Laura Cristina — data · dog person · runner">
+  <meta property="og:description" content="Data analyst, dog person and runner.">
+  <meta property="og:url" content="https://lauracristina.dev/">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div class="cursor" aria-hidden="true"></div>
+  <svg class="lines" id="bgLines" aria-hidden="true"></svg>
+
+  <main class="stage">
+
+    <!-- ============ LINKS: container with 4 divs ============ -->
+    <div class="links-box">
+
+      <div class="link-card" style="--c: var(--orange)">
+        <a href="https://www.youtube.com/@YOUR_CHANNEL" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="11" width="38" height="26" rx="8"/><path d="M21 18v12l10-6z" class="fill"/></svg>
+          <span class="text">
+            <span class="link-title">I'm on <b>YouTube</b></span>
+            <span class="link-sub">travel vlogs</span>
+          </span>
+          <span class="arrow">↗</span>
+        </a>
+      </div>
+
+      <div class="link-card" style="--c: var(--blue)">
+        <a href="https://www.linkedin.com/in/YOUR_USER" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40h32M13 34V24M21 34V14M29 34V20M37 34V9"/></svg>
+          <span class="text">
+            <span class="link-title">look my <b>data journey</b></span>
+            <span class="link-sub">projects, dashboards &amp; analysis</span>
+          </span>
+          <span class="arrow">↗</span>
+        </a>
+      </div>
+
+      <div class="link-card" style="--c: var(--yellow)">
+        <a href="https://www.strava.com/athletes/YOUR_ID" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="29" cy="8" r="4"/><path d="M18 22l6-8 8 4 4 7M24 14l-3 13 8 6-2 10M21 27l-7 5-5-2"/></svg>
+          <span class="text">
+            <span class="link-title">let's <b>run?</b></span>
+            <span class="link-sub">my runs &amp; races</span>
+          </span>
+          <span class="arrow">↗</span>
+        </a>
+      </div>
+
+      <div class="link-card" style="--c: var(--orange)">
+        <a href="https://github.com/LuaCristina" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M17 14L7 24l10 10M31 14l10 10-10 10M27 10l-6 28"/></svg>
+          <span class="text">
+            <span class="link-title">follow me on <b>GitHub</b></span>
+            <span class="link-sub">code, notebooks &amp; SQL</span>
+          </span>
+          <span class="arrow">↗</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- ============ PET + NAME ============ -->
+    <div class="identity">
+      <svg class="pet" viewBox="200 70 800 640" aria-label="Illustration of my dog" role="img">
+      <g class="blobs">
+        <path class="blob orange" d="M478 290c4-42 56-64 98-48s56 48 40 78-52 42-88 34-54-24-50-64z"/>
+        <path class="blob blue"   d="M618 268c26-36 92-40 118-8s14 72-26 82-82 4-96-20-16-34 4-54z"/>
+        <path class="blob yellow" d="M556 408c16-22 70-24 88-2s10 54-20 64-54 6-66-8-18-32-2-54z"/>
+        <path class="blob blue"   d="M600 560l34 48-34 48-34-48z"/>
+        <path class="blob orange" d="M528 610l28 40-28 40-28-40z"/>
+        <path class="blob orange" d="M672 610l28 40-28 40-28-40z"/>
+      </g>
+      <!-- lacinho -->
+      <g class="bow">
+        <path d="M560 158l-30-20v40z M566 158l30-20v40z" fill="#ef5b2a"/>
+        <circle cx="563" cy="158" r="7" fill="#f2b632"/>
+      </g>
+      <g class="ink" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <!-- cabeça -->
+        <path class="draw" d="M468 225C480 160 540 140 600 140s120 20 132 85c10 55-5 110-40 150-25 30-40 75-92 85-52-10-67-55-92-85-35-40-50-95-40-150z"/>
+        <!-- orelhonas (a da direita com a pontinha dobrada) -->
+        <path class="draw" d="M478 205C420 150 320 105 228 92c18 92 92 178 230 208"/>
+        <path class="draw thin" d="M458 248C400 215 330 170 272 122"/>
+        <path class="draw" d="M722 205C780 150 880 112 968 108c-24 86-96 162-222 192"/>
+        <path class="draw thin" d="M968 108c-34 22-52 44-58 74M742 248c58-30 122-72 176-112"/>
+        <!-- olho piscando (esq.) e olho aberto (dir.) -->
+        <path class="draw" d="M508 298c16 12 48 12 64 0"/>
+        <path class="draw thin" d="M514 305l-7 9M540 309v10M566 305l7 9"/>
+        <path class="draw" d="M628 298c16-19 52-19 68 0-16 17-52 17-68 0z"/>
+        <!-- manchinha escura da testa -->
+        <path class="draw thin" d="M600 150v58M580 162c-6 20-6 40 0 58M620 162c6 20 6 40 0 58"/>
+        <!-- focinho grisalho -->
+        <path class="draw thin" d="M545 378l-12 6M550 394l-14 2M655 378l12 6M650 394l14 2M570 358l-4 11M630 358l4 11M585 340l-2 10M615 340l2 10"/>
+        <!-- boca -->
+        <path class="draw" d="M600 448v13M600 461c-8 12-24 14-34 4M600 461c8 12 24 14 34 4"/>
+        <!-- bigodes -->
+        <path class="draw thin" d="M558 432c-40-8-80-6-112 4M642 432c40-8 80-6 112 4"/>
+        <!-- pescoço + suéter xadrez -->
+        <path class="draw" d="M520 420c-15 70-30 140-36 230M680 420c15 70 30 140 36 230"/>
+        <path class="draw" d="M510 480c52 30 128 30 180 0M506 506c56 32 132 32 188 0"/>
+        <path class="draw thin" d="M520 540l160 120M680 540L520 660"/>
+      </g>
+      <!-- narizinho -->
+      <path class="nose" d="M578 418c8-14 36-14 44 0 5 12-8 26-22 28-14-2-27-16-22-28z" fill="#0b0b0b" stroke="currentColor" stroke-width="2.2"/>
+      <path d="M590 420c4-3 10-3 14 0" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+      <g class="eyes">
+        <circle cx="662" cy="298" r="13" fill="#ef5b2a"/><circle cx="662" cy="298" r="6" fill="#0b0b0b"/>
+        <circle cx="666" cy="293" r="2.6" fill="#fff"/>
+      </g>
+    </svg>
+      <h1 class="name">
+        <span class="serif">laura</span>
+        <span class="bold">cristina</span>
+      </h1>
+      <p class="tag">data <i>·</i> dog person <i>·</i> runner</p>
+    </div>
+
+  </main>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

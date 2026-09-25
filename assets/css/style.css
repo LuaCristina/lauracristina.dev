@@ -1,0 +1,151 @@
+:root {
+  --bg: #0b0b0b;
+  --ink: #f4f1ea;
+  --muted: #9a968d;
+  --line: rgba(244, 241, 234, .26);
+  --orange: #ef5b2a;
+  --blue: #2f55d4;
+  --yellow: #f2b632;
+  --serif: "Fraunces", Georgia, serif;
+  --sans: "Outfit", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-weight: 300;
+  line-height: 1.5;
+  overflow: hidden;            /* one screen, no scroll */
+}
+a { color: inherit; text-decoration: none; }
+
+.serif { font-family: var(--serif); font-weight: 300; }
+.bold  { font-family: var(--sans);  font-weight: 800; }
+
+/* ---------- background lines ---------- */
+.lines { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+.lines path { fill: none; stroke: var(--line); stroke-width: 1; }
+
+/* ---------- layout ---------- */
+.stage {
+  position: relative; z-index: 1;
+  height: 100vh; height: 100svh;
+  display: grid; grid-template-columns: minmax(320px, 520px) 1fr;
+  align-items: center; gap: clamp(24px, 6vw, 96px);
+  padding: clamp(20px, 5vh, 56px) clamp(16px, 6vw, 96px);
+}
+
+/* ---------- links container (4 divs) ---------- */
+.links-box {
+  border: 2px solid var(--ink); border-radius: 40px; background: var(--bg);
+  padding: clamp(12px, 1.6vw, 20px);
+  display: grid; gap: clamp(10px, 1.4vh, 16px);
+}
+.link-card {
+  position: relative; overflow: hidden; isolation: isolate;
+  border: 1px solid var(--line); border-radius: 24px;
+  transition: border-color .4s, transform .4s;
+}
+.link-card::before {
+  content: ""; position: absolute; z-index: -1; right: -40px; top: -40px;
+  width: 96px; height: 96px; background: var(--c);
+  border-radius: 58% 42% 55% 45% / 45% 60% 40% 55%;
+  transition: transform .6s cubic-bezier(.2,.8,.2,1);
+}
+.link-card a {
+  display: flex; align-items: center; gap: 18px;
+  padding: clamp(14px, 2.4vh, 24px) 24px;
+}
+.icon {
+  flex: none; width: 40px; height: 40px;
+  fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round;
+}
+.icon .fill { fill: currentColor; stroke: none; }
+.text { display: flex; flex-direction: column; }
+.link-title { font-family: var(--serif); font-size: clamp(1.2rem, 1.8vw, 1.6rem); line-height: 1.15; }
+.link-title b { font-family: var(--sans); font-weight: 800; }
+.link-sub { font-size: .82rem; color: var(--muted); transition: color .3s; }
+.arrow { margin-left: auto; font-size: 1.2rem; transition: transform .3s; }
+.link-card:hover { border-color: var(--c); transform: translateX(6px); }
+.link-card:hover::before { transform: scale(8); }
+.link-card:hover, .link-card:hover .link-sub { color: var(--bg); }
+.link-card:hover .arrow { transform: translate(3px, -3px); }
+
+/* ---------- pet + name ---------- */
+.identity {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  min-height: 0; max-height: 100%;
+}
+.pet { width: 100%; max-width: 600px; max-height: 54vh; color: var(--ink); }
+.pet .ink path { stroke-width: 2.4; }
+.pet .ink .thin { stroke-width: 1.3; opacity: .8; }
+.blob.orange { fill: var(--orange); }
+.blob.blue   { fill: var(--blue); }
+.blob.yellow { fill: var(--yellow); }
+.blobs path { transform-box: fill-box; transform-origin: center; animation: breathe 6s ease-in-out infinite; }
+.blobs path:nth-child(2n) { animation-delay: -2s; }
+.blobs path:nth-child(3n) { animation-delay: -4s; }
+@keyframes breathe { 50% { transform: scale(1.06) rotate(2deg); } }
+
+.draw { stroke-dasharray: 1400; stroke-dashoffset: 1400; animation: draw 2.6s ease forwards; }
+.draw.thin { animation-delay: .8s; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+
+.eyes { animation: blink 5s infinite; transform-origin: 662px 298px; }
+@keyframes blink { 0%, 94%, 100% { transform: scaleY(1); } 97% { transform: scaleY(.1); } }
+.bow { transform-origin: 563px 158px; animation: wiggle 4s ease-in-out infinite; }
+@keyframes wiggle { 50% { transform: rotate(-8deg); } }
+
+.name {
+  display: flex; flex-direction: column; align-items: center;
+  font-size: clamp(3rem, 7vw, 6.4rem); line-height: .88; letter-spacing: -.03em;
+  margin-top: -2vh;            /* touches the sweater, like the Canva */
+  position: relative;
+}
+.name .serif { font-weight: 300; }
+.tag { margin-top: 14px; font-size: clamp(.95rem, 1.4vw, 1.2rem); letter-spacing: .04em; }
+.tag i { color: var(--orange); font-style: normal; padding: 0 .4em; }
+
+/* ---------- cursor ---------- */
+.cursor {
+  position: fixed; left: 0; top: 0; z-index: 50; pointer-events: none;
+  width: 34px; height: 34px; margin: -17px 0 0 -17px;
+  border: 1.5px solid var(--ink); border-radius: 50%;
+  mix-blend-mode: difference; opacity: 0;
+  transition: width .25s, height .25s, margin .25s, background .25s;
+}
+.cursor.big { width: 70px; height: 70px; margin: -35px 0 0 -35px; background: var(--ink); }
+@media (hover: hover) { .cursor.on { opacity: 1; } }
+
+/* ---------- tablet / phone: stack, still one screen ---------- */
+@media (max-width: 860px) {
+  .stage {
+    grid-template-columns: 1fr; grid-template-rows: 1fr auto;
+    align-items: stretch; gap: 14px; padding: 16px;
+  }
+  .identity { order: -1; justify-content: center; }
+  .pet { max-height: 34svh; }
+  .name { font-size: clamp(2.4rem, 12vw, 4rem); margin-top: -1svh; }
+  .tag { margin-top: 8px; font-size: .9rem; }
+  .links-box { grid-template-columns: 1fr 1fr; border-radius: 28px; padding: 10px; gap: 10px; }
+  .link-card { border-radius: 18px; }
+  .link-card a { flex-direction: column; align-items: flex-start; gap: 8px; padding: 14px; }
+  .icon { width: 30px; height: 30px; }
+  .link-title { font-size: 1.05rem; }
+  .link-sub { font-size: .72rem; }
+  .arrow { position: absolute; top: 12px; right: 14px; }
+  .link-card::before { width: 70px; height: 70px; right: -30px; top: -30px; }
+  .link-card:hover { transform: none; }
+}
+@media (max-height: 640px) and (max-width: 860px) {
+  .link-sub { display: none; }
+  .pet { max-height: 28svh; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .draw { stroke-dashoffset: 0; }
+}
