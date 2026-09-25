@@ -149,3 +149,8 @@ a { color: inherit; text-decoration: none; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .draw { stroke-dashoffset: 0; }
 }
+
+/* 5 cards: on phones the last card spans both columns */
+@media (max-width: 860px) {
+  .links-box .link-card:last-child:nth-child(odd) { grid-column: span 2; }
+}

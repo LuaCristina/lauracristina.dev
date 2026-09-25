@@ -15,7 +15,8 @@ A single-screen landing page that links to everything I do: travel vlogs on YouT
 - **One screen, no scroll**: responsive layout for desktop, tablet and phone
 - **Hand-drawn SVG dog** that winks, wiggles her bow and follows your cursor with her open eye
 - **Generative background**: thin line art drawn with JavaScript on every load
-- **Four link cards** with a color blob that fills the card on hover
+- **Five link cards** (YouTube, LinkedIn, data journey, Strava, GitHub) with a color blob that fills the card on hover
+- **`/projects` page** for my personal study projects, with topic filters
 - Custom circle cursor and a `prefers-reduced-motion` fallback
 - Plain HTML, CSS and JavaScript: **no frameworks, no build step, no dependencies**
 
@@ -23,10 +24,13 @@ A single-screen landing page that links to everything I do: travel vlogs on YouT
 
 ```
 lauracristina.dev/
-├── index.html            # page markup + inline SVG illustration
+├── index.html            # home: link cards + inline SVG illustration
+├── projects/index.html   # data journey: personal study projects
 ├── assets/
-│   ├── css/style.css     # colors, layout, animations, responsive rules
-│   ├── js/script.js      # background lines, cursor, eye tracking
+│   ├── css/style.css     # home styles
+│   ├── css/projects.css  # projects page styles
+│   ├── js/script.js      # home: background lines, cursor, eye tracking
+│   ├── js/projects.js    # projects page: lines + tag filters
 │   ├── img/favicon.svg
 │   └── preview/          # screenshots used in this README
 ├── CNAME                 # custom domain for GitHub Pages

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Journey — Laura Cristina</title>
+  <meta name="description" content="Personal study projects in data: notes, notebooks, dashboards and what I learned.">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/projects.css">
+</head>
+<body>
+
+  <svg class="lines" id="bgLines" aria-hidden="true"></svg>
+
+  <header class="top">
+    <a href="../" class="back">← lauracristina.dev</a>
+  </header>
+
+  <main class="wrap">
+
+    <section class="intro">
+      <span class="kicker">personal study projects</span>
+      <h1><span class="serif">my data</span> <span class="bold">journey</span></h1>
+      <p>Things I'm building and learning on my own: notebooks, dashboards, SQL practice and the notes I take along the way.</p>
+      <nav class="filters" aria-label="Filter by topic">
+        <button class="chip active" data-filter="all">all</button>
+        <button class="chip" data-filter="python">python</button>
+        <button class="chip" data-filter="sql">sql</button>
+        <button class="chip" data-filter="power-bi">power bi</button>
+        <button class="chip" data-filter="statistics">statistics</button>
+      </nav>
+    </section>
+
+    <section class="posts">
+
+      <!--
+        ==========================================================
+        HOW TO ADD A NEW PROJECT
+        1. Copy one whole <article> ... </article> block below.
+        2. Paste it at the TOP of this list (newest first).
+        3. Change: date, title, text, tags and links.
+           - data-tags: lowercase, separated by spaces
+             (use the same words as the filter buttons above)
+           - --c: var(--orange) | var(--blue) | var(--yellow)
+        4. Save, then: git add -A && git commit -m "New project" && git push
+        ==========================================================
+      -->
+
+      <article class="post" data-tags="python statistics" style="--c: var(--orange)">
+        <div class="post-meta">
+          <time datetime="2026-09-01">Sep 2026</time>
+          <span class="status">in progress</span>
+        </div>
+        <h2>Project title goes here</h2>
+        <p>One or two sentences about the question you wanted to answer, the dataset you used and what you found or learned.</p>
+        <ul class="tags"><li>python</li><li>pandas</li><li>statistics</li></ul>
+        <div class="post-links">
+          <a href="https://github.com/LuaCristina" target="_blank" rel="noopener">code ↗</a>
+          <a href="#" target="_blank" rel="noopener">notebook ↗</a>
+        </div>
+      </article>
+
+      <article class="post" data-tags="sql" style="--c: var(--blue)">
+        <div class="post-meta">
+          <time datetime="2026-08-15">Aug 2026</time>
+          <span class="status done">done</span>
+        </div>
+        <h2>Another project title</h2>
+        <p>Describe the problem, the approach (queries, model, charts) and one key insight. Keep it short: the link has the details.</p>
+        <ul class="tags"><li>sql</li><li>data modeling</li></ul>
+        <div class="post-links">
+          <a href="https://github.com/LuaCristina" target="_blank" rel="noopener">code ↗</a>
+        </div>
+      </article>
+
+      <article class="post" data-tags="power-bi" style="--c: var(--yellow)">
+        <div class="post-meta">
+          <time datetime="2026-07-20">Jul 2026</time>
+          <span class="status done">done</span>
+        </div>
+        <h2>Dashboard project title</h2>
+        <p>What the dashboard shows, who it is for and which metrics matter. Add a link to the published report or a screenshot.</p>
+        <ul class="tags"><li>power bi</li><li>dax</li></ul>
+        <div class="post-links">
+          <a href="#" target="_blank" rel="noopener">see dashboard ↗</a>
+        </div>
+      </article>
+
+    </section>
+
+    <p class="empty" hidden>No projects with this tag yet.</p>
+  </main>
+
+  <footer class="foot">
+    <span>© <span id="year"></span> laura cristina</span>
+    <a href="https://github.com/LuaCristina" target="_blank" rel="noopener">github ↗</a>
+  </footer>
+
+  <script src="../assets/js/projects.js"></script>
+</body>
+</html>
